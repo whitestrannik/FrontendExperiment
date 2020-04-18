@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(1, 59, 19);
+    color:lightgoldenrodyellow;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.page-button-container {
+    overflow: hidden;
+}
+
+.page-button {
+    float: left;
+    width: 20%;
+    padding: 15px;
+    cursor: pointer;
+    outline: none;
+    color: silver;
+    border: 1px solid #ccc;
+    text-align: center ;
+}
+
+#selected:hover, .page-button:hover {
+    background-color: darkblue;
+}
+
+#selected:active, .page-button:active {
+    background-color: darkmagenta;
+}
+
+ #selected {
+    background-color: blue;
+}
+
+
+.page-container {
+    background-color: goldenrod;
+    border: 1px solid #ccc;
+    /* margin: 5px; */
+    display: none;
+}
+
+.page-header {
+    font-size: larger;
+    text-align: center;
+}
+
+.page-content {
+    font-size: 0.9em;
+    color:white;
+    text-align: center;
+}

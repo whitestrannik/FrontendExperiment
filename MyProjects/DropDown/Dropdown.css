@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: dimgray;
+    color: whitesmoke
+}
+
+h1 {
+    text-align: center;
+}
+
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-list {
+    display: none;
+    position: absolute;
+}
+
+.show {
+    display: block;
+}
+
+.dropdown-list a, .dropdown-button {
+    display: block;
+    background-color: greenyellow;
+    width: 200px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: darkslateblue;
+}
+
+.dropdown-list a:hover, .dropdown-button:hover {
+    background-color: green;
+    color: white;
+}
+
+.dropdown-list a {
+    background-color: lightgreen;
+}
