@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(75, 74, 74);
+    color:  whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    background-color: rgb(75, 51, 51);
+    text-align: center;
+}
+
+.accordion-header {
+    background-color: rgb(45, 45, 51);
+    line-height: 30px;
+    padding-left: 10px;
+    font-size: 1.4em;
+    overflow: hidden;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.accordion-header:hover {
+    background-color: rgb(24, 24, 31);
+}
+
+.accordion-header.active {
+    background-color: rgb(35, 35, 70);
+}
+
+.accordion-header p:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;    
+}
+
+.accordion-header.active p:after {
+    content: '\2212';
+    color: #777;
+    font-weight: bold;
+    float: right;    
+}
+
+.accordion-content {
+    overflow: hidden;
+    max-height: 0;
+}
+
+
+.accordion-content p {
+    padding : 0;
+}
