@@ -33,6 +33,7 @@ body {
     margin: 6px;
     top: 130px;
     text-align: center;
+    background-color: rgb(63, 62, 62);
 }
 
 .sidebar p {
@@ -42,6 +43,10 @@ body {
     background-color: deepskyblue;
     margin-top: 6px;
     padding: 6px;
+}
+
+.sidebar h3 {
+    margin-bottom: 22px;
 }
 
 .sidebar p:hover {
@@ -56,11 +61,12 @@ body {
     border-radius: 8px;
     padding: 12px;
     font-size: larger;
+    background-color: rgb(63, 62, 62);
 }
 
 .footer {
     border-top: 4px solid darkgreen;
-    background-color: darkgray;
+    background-color: rgb(63, 62, 62);
     text-align: center;
     padding: 20px;
     width: 100%;
