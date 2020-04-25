@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body {
+    background-color: rgb(65, 24, 21);
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+label{
+    padding: 10px 12px 10px 0;
+    display: inline-block;
+}
+
+input[type=text], textarea, select {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    transition: 0.3s ease-out;
+}
+
+input[type=text]:hover, textarea:hover, select:hover {
+    width: 100%;
+    padding: 14px 14px 14px 14px;
+    transition: 0.3s ease-out;
+}
+
+input[type=button] {
+    width: auto;
+    padding: 10px 10px 10px 10px;
+    background-color: dodgerblue;
+    color: white;
+    font-size: larger;
+    border: none;
+    margin-top: 12px;
+    transition: 0.3s ease-out;
+}
+
+input[type=button]:hover {
+    background-color: darkblue;
+    padding: 20px 10px 20px 10px;
+    transition: 0.3s ease-out;
+}
+
+.header {
+    background-color: rgb(80, 50, 16);
+    line-height: 80px;
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+    border-radius: 9px;
+}
+
+.col-30 {
+    float: left;
+    width: 30%;
+}
+
+.col-70 {
+    float: left;
+    width: 70%;
+}
+
+.row {
+    margin-bottom: 6px;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer {
+    background-color: rgb(116, 59, 6);
+    line-height: 60px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .col-30, .col-70, input[type=button] {
+        width: 100%;
+    }
+}

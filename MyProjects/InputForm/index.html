@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>Input form example</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="header">
+        <h1>
+            Example of input form
+        </h1>
+    </div>
+    <div class="container">
+        <form action="#">
+            <div class="row">
+                <div class="col-30">
+                    <label for="usernameId">User name</label>
+                </div>
+                <div class="col-70">
+                    <input type="text" id="usernameId" name="username" placeholder="Your first name..">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-30">
+                    <label for="lastnameId">Last name</label>
+                </div>
+                <div class="col-70">
+                    <input type="text" id="lastnameId" name="lastname" placeholder="Your last name..">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-30">
+                    <label for="listId">List of values</label>
+                </div>
+                <div class="col-70">
+                    <select id="listId" name="listofvalues">
+                        <option value="Value1">Val1</option>
+                        <option value="Value2">Val2</option>
+                        <option value="Value3">Val3</option>
+                        <option value="Value4">Val4</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-30">
+                    <label for="textareaId">Text area</label>
+                </div>
+                <div class="col-70">
+                    <textarea id="textareaId" name="text" placeholder="For text..."></textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <input type="button" id="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        <h3>Footer section</h3>
+    </div>
+</body>
+
+</html>
