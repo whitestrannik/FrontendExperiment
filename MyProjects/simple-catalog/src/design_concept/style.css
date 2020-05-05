@@ -1,0 +1,12 @@
+
+.jumbotron {
+    background-color:  brown;
+    padding: 6px;
+}
+
+
+.sc-logo {
+    display: block;
+    max-width: 150px;
+    height: auto;
+}
