@@ -1,49 +1,128 @@
 <html>
-    <head>
-        <title>Simple catalog!</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
 
-    <body>
-        
-        <div class="sc-header jumbotron jumbotron-fluid text-center text-white">
-            <div class="container p-0">
-                <div class="row align-items-center">
-                    <div class="col-sm-3">
-                        <img class="sc-logo mx-auto" src="logo_transparent.png" alt="Logo image">
-                    </div>
-    
-                    <div class="col-sm-9">
-                        <h2>Simple catalog portal</h2>
-                        <h6 class="text-light">There you can find all that you need for daily life and a lot of other usefull staff</h6>
-                    </div>
+<head>
+    <title>Simple catalog!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="sc-header jumbotron jumbotron-fluid text-center text-white">
+        <div class="container p-0">
+            <div class="row align-items-center">
+                <div class="col-sm-3">
+                    <img class="sc-logo mx-auto" src="logo_transparent.png" alt="Logo image">
+                </div>
+
+                <div class="col-sm-9">
+                    <h2>Simple catalog portal</h2>
+                    <h6 class="text-light">There you can find all that you need for daily life and a lot of other
+                        usefull staff</h6>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="sc-navbar">
-            <a href="#">Home</a>
-            <a href="#">Region</a>
-            <a href="#">Contacts</a>
+    <nav class="navbar navbar-expand-sm navbar-dark ">
+        <a class="navbar-brand" href="#">
+            <img src="logo_transparent.png" alt="Logo" >
+        </a>
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+    
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Regions</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Ukraine</a>
+                        <a class="dropdown-item" href="#">Canada</a>
+                        <a class="dropdown-item" href="#">USA</a>
+                        <a class="dropdown-item" href="#">Moldova</a>
+                    </div>
+                </li>
+    
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacts</a>
+                </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+              </form>
         </div>
+    </nav>
 
-        <div class="sc-content">
-            <div class="sc-card">
-                <h3>Card 1</h3>
-                <p>Card 1 descrption</p>
-                <img src="" alt="Card 1 image">
+    <div class="container-fluid p-6">
+        <div class="card-deck">
+            <div class="card bg-secondary mb-3 mt-3">
+                <div class="card-header text-danger bg-light border-danger">
+                    Good N123123535345
+                </div>
+                
+                <div class="card-body">
+                    <h5 class="card-title">Surface tablet PC</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+
+                <div class="card-footer bg-light ">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
             </div>
-            
-            <div class="sc-card">
-                <h3>Card 1</h3>
-                <p>Card 1 descrption</p>
-                <img src="" alt="Card 1 image">
+    
+            <div class="card bg-secondary mb-3 mt-3">
+                <div class="card-header text-danger bg-light border-danger">
+                    Good N123123535345
+                </div>
+                
+                <div class="card-body">
+                    <h5 class="card-title">iPad PRO</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+
+                <div class="card-footer bg-light ">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+
+            <div class="card bg-secondary mb-3 mt-3">
+                <div class="card-header text-danger bg-light border-danger">
+                    Good N123123535345
+                </div>
+                
+                <div class="card-body">
+                    <h5 class="card-title">iPad PRO</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+
+                <div class="card-footer bg-light ">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="footer">
-            <p>Footer. All right reserved (c)!</p>
-        </div>
-    </body>
+    <div class="footer">
+        <p>Footer. All right reserved (c)!</p>
+    </div>
+</body>
+
 </html>
