@@ -1,0 +1,31 @@
+
+.card {
+    max-width: 300px;
+    min-width: 300px;
+    margin : 16px;
+    transition: ease-out 0.2s;
+}
+
+.card:hover {
+    color: rgb(149, 247, 247);
+    max-width: 305px;
+    min-width: 305px;
+    border: solid rgb(149, 247, 247);
+    margin-left: 12px;
+}
+
+.card-header {
+    background-color:  rgb(114, 27, 27);
+}
+
+.card-body img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    background-color:  rgb(114, 27, 27);
+    transition: ease-out 0.2s;
+}
+
+.card-body:hover img {
+    background-color:  rgb(149, 247, 247);
+}

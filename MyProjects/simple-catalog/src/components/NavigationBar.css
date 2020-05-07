@@ -1,0 +1,20 @@
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    font-size: larger;
+    padding-left: 16px;
+}
+
+.navbar-brand, .navbar-brand img {
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar-brand img {
+    width: 60px;
+}
+
+.navbar {
+    padding: 0px 6px 0px 0px;
+    background-color:  rgb(49, 21, 21);
+}

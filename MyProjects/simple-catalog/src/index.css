@@ -1,0 +1,7 @@
+body {
+    margin: 0;
+    background-image: url("./design_concept/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(49, 21, 21);
+  }
