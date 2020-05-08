@@ -24,7 +24,7 @@ class App extends Component {
 
     render() {
         const resultGoods = this.state.goods
-            .filter((good, i) => { return (i > 25);  })
+            .filter((good, i) => { return (i < 20);  })
             .map((good, i) => {
                 return {
                   id: `ID${good.id}234`,
