@@ -1,40 +1,42 @@
-import React, { Component } from 'react';
-import Catalog from '../components/Catalog';
-import NavigationBar from '../components/NavigationBar';
-import './App.css'
-import logo from '../design_concept/logo_transparent.png';
+import React, { Component } from "react";
+import Catalog from "../components/Catalog";
+import NavigationBar from "../components/NavigationBar";
+import "./App.css";
+import logo from "../design_concept/logo_transparent.png";
 
 class App extends Component {
     constructor() {
         super();
 
         this.state = {
-            goods : [],
+            goods: [],
             region: null,
-            searchString: ''
-        }
+            searchString: "",
+        };
     }
-    
-    componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/albums')
-          .then(response=> response.json())
-          .then(json => {this.setState({ goods: json})});
-        }
 
+    componentDidMount() {
+        fetch("https://jsonplaceholder.typicode.com/albums")
+            .then((response) => response.json())
+            .then((json) => {
+                this.setState({ goods: json });
+            });
+    }
 
     render() {
         const resultGoods = this.state.goods
-            .filter((good, i) => { return (i < 20);  })
+            .filter((good, i) => {
+                return i < 20;
+            })
             .map((good, i) => {
                 return {
-                  id: `ID${good.id}234`,
-                  name: good.title,
-                  description: "Descrption: " + good.title,
-                  lastUpdate: Math.floor(Math.random() * 10), 
-                  img: `https://robohash.org/${good.id}?size=200x200`   
+                    id: `ID${good.id}234`,
+                    name: good.title,
+                    description: "Descrption: " + good.title,
+                    lastUpdate: Math.floor(Math.random() * 10),
+                    img: `https://robohash.org/${good.id}?size=200x200`,
                 };
             });
-
 
         return (
             <div>
@@ -42,12 +44,19 @@ class App extends Component {
                     <div className="container p-0">
                         <div className="row align-items-center">
                             <div className="col-sm-3">
-                                <img className="sc-logo mx-auto" src={logo} alt="Logo" />
+                                <img
+                                    className="sc-logo mx-auto"
+                                    src={logo}
+                                    alt="Logo"
+                                />
                             </div>
-    
+
                             <div className="col-sm-9">
                                 <h2>Simple catalog portal</h2>
-                                <h6 className="text-light">There you can find all that you need for daily life and a lot of other usefull staff</h6>
+                                <h6 className="text-light">
+                                    There you can find all that you need for
+                                    daily life and a lot of other usefull staff
+                                </h6>
                             </div>
                         </div>
                     </div>
@@ -55,10 +64,14 @@ class App extends Component {
 
                 <NavigationBar />
 
-                <Catalog goods = {resultGoods}/>
+                <div className="sc-content">
+                    <Catalog goods={resultGoods} />
+                </div>
 
                 <footer className="sc-footer ">
-                    <p className="text-center my-auto mx-auto text-white">Footer. All right reserved (c)!</p>
+                    <p className="text-center my-auto mx-auto text-white">
+                        Footer. All right reserved (c)!
+                    </p>
                 </footer>
             </div>
         );
