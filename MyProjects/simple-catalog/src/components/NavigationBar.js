@@ -3,24 +3,26 @@ import './NavigationBar.css';
 import logo from '../design_concept/logo_transparent.png';
 
 class NavigationBar extends Component {
-    constructor() {
+    constructor({onRegionChanged, onSearchChanged}) {
         super();
-        
+
         this.state = {
           menu: false,
-          dropdown: false
+          dropdown: false,
+          onRegionChanged: onRegionChanged,
+          onSearchChanged: onSearchChanged
         };
 
         this.toggleMenu = this.toggleMenu.bind(this);
-      }
-    
-      toggleMenu() {
-        this.setState({ menu: !this.state.menu })
-      }
+    }
 
-      toggleDropdown = () => {
+    toggleMenu() {
+        this.setState({ menu: !this.state.menu })
+    }
+
+    toggleDropdown = () => {
         this.setState({ dropdown: !this.state.dropdown })
-      }
+    }
 
     render() {
         const showMenu = (this.state.menu) ? "show" : "" ;
@@ -45,10 +47,10 @@ class NavigationBar extends Component {
                         <li className="nav-item dropdown" onClick={ this.toggleDropdown } >
                             <a className="nav-link dropdown-toggle" href="#" >Regions</a>
                             <div className={"dropdown-menu " + showDropdown}>
-                                <a className="dropdown-item" href="#">Ukraine</a>
-                                <a className="dropdown-item" href="#">Canada</a>
-                                <a className="dropdown-item" href="#">USA</a>
-                                <a className="dropdown-item" href="#">Moldova</a>
+                                <a className="dropdown-item" href="#" onClick={ () => { this.state.onRegionChanged('Ukraine') }}>Ukraine</a>
+                                <a className="dropdown-item" href="#" onClick={ () => { this.state.onRegionChanged('Canada') }}>Canada</a>
+                                <a className="dropdown-item" href="#" onClick={ () => { this.state.onRegionChanged('USA') }}>USA</a>
+                                <a className="dropdown-item" href="#" onClick={ () => { this.state.onRegionChanged('Moldova') }}>Moldova</a>
                             </div>
                         </li>
             
@@ -58,7 +60,7 @@ class NavigationBar extends Component {
                     </ul>
 
                     <form className="form-inline my-auto my-lg-0">
-                        <input className="form-control mr-sm-2" type="search" placeholder="Search"/>
+                        <input className="form-control mr-sm-2" type="search" placeholder="Search" onChange={this.state.onSearchChanged}/>
                         <button className="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </div>

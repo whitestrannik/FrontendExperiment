@@ -10,32 +10,48 @@ class App extends Component {
 
         this.state = {
             goods: [],
-            region: null,
+            region: "",
             searchString: "",
         };
+    }
+
+    onRegionChanged = (regionName) => 
+    {
+        this.setState({ region: regionName });
+    }
+
+    onSearchChanged = (event) => 
+    {
+        this.setState({ searchString: event.target.value });
+        console.log(event.target.value);
     }
 
     componentDidMount() {
         fetch("https://jsonplaceholder.typicode.com/albums")
             .then((response) => response.json())
             .then((json) => {
-                this.setState({ goods: json });
+                const data = json.map((good, i) =>
+                {
+                    return {
+                        id: `ID${good.id}00001`,
+                        name: good.title,
+                        description: "Descrption: " + good.title,
+                        lastUpdate: Math.floor(Math.random() * 10),
+                        region: this.getRegion(),
+                        img: `https://robohash.org/${good.id}?size=200x200`,
+                    };
+                });
+
+                this.setState({ goods: data });
             });
     }
 
     render() {
         const resultGoods = this.state.goods
             .filter((good, i) => {
-                return i < 20;
-            })
-            .map((good, i) => {
-                return {
-                    id: `ID${good.id}234`,
-                    name: good.title,
-                    description: "Descrption: " + good.title,
-                    lastUpdate: Math.floor(Math.random() * 10),
-                    img: `https://robohash.org/${good.id}?size=200x200`,
-                };
+                return i < 20 && 
+                    (this.state.region === "" || good.region === this.state.region) &&
+                    (!this.state.searchString || this.state.searchString === "" || good.name.toLowerCase().includes(this.state.searchString.toLowerCase()));
             });
 
         return (
@@ -62,7 +78,7 @@ class App extends Component {
                     </div>
                 </header>
 
-                <NavigationBar />
+                <NavigationBar onRegionChanged={this.onRegionChanged} onSearchChanged={this.onSearchChanged} />
 
                 <div className="sc-content">
                     <Catalog goods={resultGoods} />
@@ -75,6 +91,31 @@ class App extends Component {
                 </footer>
             </div>
         );
+    }
+
+    getRegion() {
+        let result = '';
+        const key = Math.floor(Math.random() * Math.floor(4))
+
+        switch (key) {
+            case 0:
+                result = 'Ukraine';
+                break;
+            case 1:
+                result = 'Canada';
+                break;
+            case 2:
+                result = 'USA';
+                break;
+            case 3:
+                result = 'Moldova';
+                break;
+        
+            default:
+                console.log("Strange!: " + key);
+                break;
+        }
+        return result;
     }
 }
 
