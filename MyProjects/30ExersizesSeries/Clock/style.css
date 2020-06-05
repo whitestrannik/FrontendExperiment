@@ -1,0 +1,69 @@
+html {
+    margin: 0;
+    padding: 0;
+    background-image: url("background.jpg");
+    background-size: cover;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-container {
+    background-color: rgba(5, 5, 223, 0.3);
+    width: 70vh;
+    height: 70vh;
+    border-radius: 50%;
+    border: 2px solid rgba(4, 48, 192, 0.8);
+    position: relative;
+    box-shadow: 8px -2px 24px 4px rgba(7,10,113,0.89);
+}
+
+.center {
+    /* transform-origin: 100%; */
+    width: 8vh;
+    height: 8vh;
+    border-radius: 50%;
+    background-color: rgb(107, 63, 63);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-4vh, -4vh);
+    box-shadow: 0px 0px 8px 8px rgb(231, 12, 48, 0.6);
+}
+
+.hand {
+    transform-origin: 100%;
+    height: 2vw;
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: rotate(90deg);
+    border-radius: 40%;
+}
+
+.hand.hour {
+    width: 35%;
+    left: 15%;
+    height: 2vw;
+    background-color: rgba(160, 76, 87, 0.6);
+    box-shadow: 8px 8px 8px 3px rgba(235,23,71,0.12);
+}
+
+.hand.minute {
+    width: 40%;
+    left: 10%;
+    height: 1vw;
+    background-color: rgba(179, 77, 77, 0.7);
+    box-shadow: 8px 8px 8px 3px rgba(235,23,71,0.12);
+}
+
+.hand.second {
+    width: 49%;
+    left: 1%;
+    height: 4px;
+    background-color: rgba(148, 67, 40, 0.9);
+    box-shadow: 8px 8px 8px 2px rgba(235,23,71,0.17);
+}
